@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage Visual="Material"
+            xmlns="http://xamarin.com/schemas/2014/forms"
+                     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                     x:Class="FamilyTreeApp.Pages.UserSpousePage"
+                     xmlns:ic="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+                     >
+    <TableView Intent="Form">
+        <TableRoot>
+            <TableSection Title="Parents">
+                <EntryCell  Placeholder="Father First Name" Text="{Binding FatherFirstName}"></EntryCell>
+                <EntryCell Placeholder="Father Last Name" Text="{Binding FatherLastName}"></EntryCell>
+                <EntryCell Placeholder="Mother First Name" Text="{Binding MotherFirstName}"></EntryCell>
+                <EntryCell Placeholder="Mother Last Name" Text="{Binding MotherLastName}"></EntryCell>
+
+            </TableSection>
+
+            <TableSection x:Name="Spouses" Title="Spouse(s)">
+                <ViewCell>
+                    <StackLayout>
+                        <Grid>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="20"/>
+                                <ColumnDefinition Width="2*"/>
+                                <!--<ColumnDefinition Width="*"/>-->
+                            </Grid.ColumnDefinitions>
+
+                            <Label VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="0" Grid.Column="0" 
+                                           Text="{Binding Source={x:Reference stepper},Path=Value}"/>
+
+                            <Stepper Grid.Row="0" Grid.Column="1" x:Name="stepper" Increment="1" Maximum="5" Minimum="1" >
+                            </Stepper>
+                            <!--<Image  Grid.Row="0" Grid.Column="2"  Source="sharp_group_add_black_18.png" />-->
+                            <ic:CircleImage  Grid.Row="0" Grid.Column="2"  Source="sharp_group_add_black_18.png">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnStepperValueChanged" />
+                                </Image.GestureRecognizers>
+
+                            </ic:CircleImage>
+
+                        </Grid>
+
+                        <!--<Label Text="{Binding Source={x:Reference stepper},Path=Value}"/>
+                                <Stepper x:Name="stepper" Increment="1" Maximum="5" Minimum="1" ></Stepper>
+                                <ImageButton Source="sharp_group_add_black_18.png"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="CenterAndExpand" />-->
+
+                    </StackLayout>
+
+                </ViewCell>
+            </TableSection>
+        </TableRoot>
+    </TableView>
+
+</ContentPage>

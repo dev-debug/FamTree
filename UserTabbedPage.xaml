@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+            <ContentPage Visual="Material"
+                xmlns="http://xamarin.com/schemas/2014/forms"
+                         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                         x:Class="FamilyTreeApp.Pages.UserTabbedPage">
+                <TableView Intent="Form">
+                    <TableRoot>
+                        <TableSection Title="Basic">
+                            <EntryCell Placeholder="Title" Text="{Binding Title}"></EntryCell>
+                            <EntryCell Placeholder="First Name" Text="{Binding FirstName}"></EntryCell>
+                            <EntryCell Placeholder="Last Name" Text="{Binding LastName}"></EntryCell>
+                            <!--<EntryCell Placeholder="Nick Name" Text="{Binding NickName}"></EntryCell>-->
+                            <EntryCell Placeholder="Age" Text="{Binding Age}"></EntryCell>
+                            <EntryCell Placeholder="Profession" Text="{Binding Profession}"></EntryCell>
+                        </TableSection>
+                        <TableSection Title="Contact">
+                            <EntryCell Placeholder="Address 1" Text="{Binding Address1}"></EntryCell>
+                            <EntryCell Placeholder="Address 2" Text="{Binding Address2}"></EntryCell>
+                            <EntryCell Placeholder="City" Text="{Binding City}"></EntryCell>
+                            <EntryCell Placeholder="State" Text="{Binding State}"></EntryCell>
+                            <EntryCell Placeholder="Zip" Text="{Binding Zip}" Keyboard="Numeric"></EntryCell>
+                            <EntryCell Placeholder="Country" Text="{Binding Country}"></EntryCell>
+                             <!--<EntryCell PropertyChanged="OnAddUser"  Placeholder="Phone" Text="{Binding Phone}" Keyboard="Numeric"></EntryCell>-->
+                            <EntryCell Placeholder="Phone" Text="{Binding Phone}" Keyboard="Numeric"></EntryCell>
+
+            </TableSection>
+                           </TableRoot>
+                </TableView>
+
+            </ContentPage>
+
+            <!--<TableSection>
+                            <ViewCell>
+                                <Button Text="Save" Clicked="OnSave"></Button>
+                            </ViewCell>
+                        </TableSection>-->
+
+            <!--<EntryCell Label="Phone" Text="{Binding Phone}" Keyboard="Numeric"></EntryCell>
+                            <EntryCell Label="Email" Text="{Binding Email}" Keyboard="Email"></EntryCell>-->

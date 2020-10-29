@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+        <TabbedPage Visual="Material" 
+                xmlns="http://xamarin.com/schemas/2014/forms"
+                         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+                    xmlns:local="clr-namespace:FamilyTreeApp.Pages"
+                        x:Class="FamilyTreeApp.Pages.UserInfoTabbedPage"
+                    >
+    <!--xmlns:local="clr-namespace:FamilyTreeApp.ViewModels"-->
+
+    <!--<local:UserTabbedPage  Title ="User" 
+                                     Icon ="user.png"/>
+            <local:UserSpousePage Title ="Family" 
+                                     Icon ="sharp_group_add_black_18.png"/>
+            <local:UserChildrenTabbedPage class="material-icons"  Title ="User" 
+                                     Icon ="user.png"/>-->
+
+
+    <!--<local:UserTabbedPage PropertyChanged="OnAddUser"  Title ="User" Icon ="user.png" BindingContext="{Binding UserViewTab}"/>-->
+    <!--<local:UserTabbedPage  Title ="User" Icon ="user.png" BindingContext="{Binding UserViewTab}"/>
+    <local:UserSpousePage Title ="Family" Icon ="sharp_group_add_black_18.png" BindingContext="{Binding UserSpouseViewTab}"/>
+    <local:UserChildrenTabbedPage class="material-icons"  Title ="User" Icon ="user.png" BindingContext="{Binding UserChildrenViewTab}"/>-->
+
+    <local:UserTabbedPage  Title ="User" Icon ="user.png"/>
+    <local:UserSpousePage Title ="Family" Icon ="sharp_group_add_black_18.png" />
+    <local:UserChildrenTabbedPage class="material-icons"  Title ="User" Icon ="user.png" />
+
+</TabbedPage>   
